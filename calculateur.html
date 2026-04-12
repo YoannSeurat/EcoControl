@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil — Projet Green IT</title>
+  <meta name="description" content="Mesurez votre empreinte carbone en cinq minutes. Répondez à quelques questions sur vos transports, votre logement et votre alimentation, et recevez des conseils personnalisés." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+  <!-- ══ Navigation ══ -->
+  <header>
+    <nav class="nav" aria-label="Navigation principale">
+      <div class="container nav__inner">
+        <a href="/" class="nav__logo" aria-label="Accueil Projet Green IT">LOGO</a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="calculateur.html">Calculateur</a></li>
+          <li><a href="conseils.html">Conseils</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <a href="connexion.html" class="btn btn-outline">Connexion</a>
+          <a href="inscription.html" class="btn btn-primary">Inscription</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  <div class="container" style="padding: var(--sp-16) 0;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <h1 style="font-family: var(--font-display); margin-bottom: var(--sp-2);">Calculateur d'empreinte</h1>
+      <p style="margin-bottom: var(--sp-8);">Répondez à ces quelques questions pour obtenir votre bilan.</p>
+      
+      <form class="auth-card" style="max-width: 100%; text-align: left;">
+        <div class="form-group">
+          <label>Combien d'heures par jour passez-vous sur internet ?</label>
+          <input type="number" class="form-control" placeholder="ex: 5">
+        </div>
+
+        <div class="form-group">
+          <label>Quel est votre principal équipement ?</label>
+          <select class="form-control">
+            <option>Ordinateur portable</option>
+            <option>Ordinateur fixe</option>
+            <option>Smartphone</option>
+            <option>Tablette</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Type de connexion privilégiée</label>
+          <div style="display: flex; gap: var(--sp-4); margin-top: var(--sp-2);">
+            <label style="font-weight: normal;"><input type="radio" name="conn" checked> Wi-Fi</label>
+            <label style="font-weight: normal;"><input type="radio" name="conn"> 4G / 5G</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--sp-6);">Calculer mon impact</button>
+      </form>
+    </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+      <p class="footer__logo">LOGO</p>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h5>Navigation</h5>
+          <ul role="list">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="calculateur.html">Calculateur</a></li>
+            <li><a href="conseils.html">Conseils</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Légal</h5>
+          <ul role="list">
+            <li><a href="/confidentialite">Confidentialité</a></li>
+            <li><a href="/conditions">Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Projet Green IT. Tous droits réservés.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

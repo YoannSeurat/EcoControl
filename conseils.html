@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil — Projet Green IT</title>
+  <meta name="description" content="Mesurez votre empreinte carbone en cinq minutes. Répondez à quelques questions sur vos transports, votre logement et votre alimentation, et recevez des conseils personnalisés." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+  <!-- ══ Navigation ══ -->
+  <header>
+    <nav class="nav" aria-label="Navigation principale">
+      <div class="container nav__inner">
+        <a href="/" class="nav__logo" aria-label="Accueil Projet Green IT">LOGO</a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="calculateur.html">Calculateur</a></li>
+          <li><a href="conseils.html">Conseils</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <a href="connexion.html" class="btn btn-outline">Connexion</a>
+          <a href="inscription.html" class="btn btn-primary">Inscription</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  <section class="hero">
+    <div class="container">
+      <h1>Conseils & Bonnes Pratiques</h1>
+      <p>Réduisez votre impact numérique avec ces gestes simples.</p>
+    </div>
+  </section>
+
+  <section class="container" style="padding: var(--sp-12) 0;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-6);">
+      <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
+        <span style="color: var(--clr-accent); font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Équipement</span>
+        <h3 style="margin: var(--sp-2) 0;">Faire durer ses appareils</h3>
+        <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Réparer plutôt que remplacer peut diviser votre empreinte par deux.</p>
+        <a href="#" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">En savoir plus →</a>
+      </article>
+
+      <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
+        <span style="color: var(--clr-accent); font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Usage Web</span>
+        <h3 style="margin: var(--sp-2) 0;">Nettoyer ses emails</h3>
+        <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Supprimer les messages inutiles réduit le stockage sur les serveurs.</p>
+        <a href="#" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">En savoir plus →</a>
+      </article>
+      
+      </div>
+  </section>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+      <p class="footer__logo">LOGO</p>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h5>Navigation</h5>
+          <ul role="list">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="calculateur.html">Calculateur</a></li>
+            <li><a href="conseils.html">Conseils</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Légal</h5>
+          <ul role="list">
+            <li><a href="/confidentialite">Confidentialité</a></li>
+            <li><a href="/conditions">Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Projet Green IT. Tous droits réservés.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
