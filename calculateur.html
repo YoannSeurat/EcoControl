@@ -9,298 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="output.css" />
 
-  <style>
-    /* ── Stepper ── */
-    .calc-wrapper {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: var(--sp-16) var(--sp-6);
-    }
-
-    .stepper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-      margin-bottom: var(--sp-12);
-    }
-
-    .step-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--sp-2);
-      position: relative;
-    }
-
-    .step-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 14px;
-      left: calc(50% + 14px);
-      width: calc(100% - 4px);
-      height: 2px;
-      background: var(--clr-border);
-      transition: background 0.3s;
-    }
-
-    .step-item.done::after  { background: var(--clr-accent); }
-
-    .step-num {
-      width: 28px; height: 28px;
-      border-radius: 50%;
-      border: 2px solid var(--clr-border);
-      background: var(--clr-bg);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.75rem; font-weight: 600;
-      color: var(--clr-text-muted);
-      transition: all 0.3s;
-      z-index: 1;
-    }
-
-    .step-item.active .step-num {
-      border-color: var(--clr-accent);
-      background: var(--clr-accent);
-      color: white;
-    }
-
-    .step-item.done .step-num {
-      border-color: var(--clr-accent);
-      background: var(--clr-accent-dim);
-      color: var(--clr-accent);
-    }
-
-    .step-label {
-      font-size: 0.7rem;
-      color: var(--clr-text-muted);
-      white-space: nowrap;
-      font-weight: 500;
-    }
-
-    .step-item.active .step-label { color: var(--clr-accent); }
-
-    .stepper-row {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0;
-      width: 100%;
-      margin-bottom: var(--sp-12);
-    }
-
-    /* ── Steps ── */
-    .calc-step { display: none; }
-    .calc-step.active { display: block; }
-
-    .step-header {
-      margin-bottom: var(--sp-8);
-    }
-
-    .step-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--clr-accent-mid);
-      margin-bottom: var(--sp-2);
-    }
-
-    .step-header h2 {
-      font-size: clamp(1.4rem, 3vw, 1.9rem);
-      color: var(--clr-text);
-      margin-bottom: var(--sp-2);
-    }
-
-    .step-header p {
-      font-size: 0.875rem;
-    }
-
-    /* ── Cards de choix ── */
-    .choice-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--sp-3);
-      margin-bottom: var(--sp-6);
-    }
-
-    .choice-card {
-      border: 1.5px solid var(--clr-border);
-      border-radius: var(--radius-md);
-      padding: var(--sp-4);
-      cursor: pointer;
-      transition: border-color 0.15s, background 0.15s;
-      background: var(--clr-white);
-      display: flex;
-      align-items: flex-start;
-      gap: var(--sp-3);
-    }
-
-    .choice-card:hover { border-color: var(--clr-accent-mid); }
-
-    .choice-card input[type="radio"],
-    .choice-card input[type="checkbox"] {
-      margin-top: 3px;
-      accent-color: var(--clr-accent);
-      flex-shrink: 0;
-    }
-
-    .choice-card:has(input:checked) {
-      border-color: var(--clr-accent);
-      background: var(--clr-accent-dim);
-    }
-
-    .choice-label { font-size: 0.875rem; font-weight: 500; color: var(--clr-text); line-height: 1.3; }
-    .choice-sub   { font-size: 0.78rem; color: var(--clr-text-muted); margin-top: 2px; }
-
-    /* ── Slider ── */
-    .slider-group { margin-bottom: var(--sp-6); }
-
-    .slider-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: var(--sp-3);
-    }
-
-    .slider-header label { font-size: 0.875rem; font-weight: 500; color: var(--clr-text); }
-
-    .slider-val {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      color: var(--clr-accent);
-      font-weight: 600;
-    }
-
-    input[type="range"] {
-      width: 100%;
-      accent-color: var(--clr-accent);
-      cursor: pointer;
-    }
-
-    .slider-ticks {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.7rem;
-      color: var(--clr-text-muted);
-      margin-top: var(--sp-1);
-    }
-
-    /* ── Navigation boutons ── */
-    .step-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: var(--sp-8);
-      padding-top: var(--sp-6);
-      border-top: 1px solid var(--clr-border);
-    }
-
-    /* ── Résultats ── */
-    .result-total {
-      text-align: center;
-      padding: var(--sp-8);
-      background: var(--clr-text);
-      border-radius: var(--radius-lg);
-      margin-bottom: var(--sp-6);
-      color: white;
-    }
-
-    .result-total .eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-      margin-bottom: var(--sp-3);
-    }
-
-    .result-kg {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 8vw, 4.5rem);
-      color: var(--clr-accent-lt);
-      line-height: 1;
-    }
-
-    .result-kg span { font-size: 1.2rem; opacity: 0.7; }
-
-    .result-compare {
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.55);
-      margin-top: var(--sp-3);
-    }
-
-    .result-badge {
-      display: inline-block;
-      margin-top: var(--sp-4);
-      padding: var(--sp-1) var(--sp-4);
-      border-radius: 100px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
-    .badge-good   { background: var(--clr-accent-dim); color: var(--clr-accent); }
-    .badge-mid    { background: #FEF3C7; color: #92400E; }
-    .badge-bad    { background: #FEE2E2; color: #991B1B; }
-
-    /* ── Barre catégories ── */
-    .cat-bars { margin-bottom: var(--sp-6); }
-
-    .cat-bar-item {
-      margin-bottom: var(--sp-4);
-    }
-
-    .cat-bar-header {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.875rem;
-      margin-bottom: var(--sp-2);
-    }
-
-    .cat-bar-label { font-weight: 500; color: var(--clr-text); }
-    .cat-bar-val   { color: var(--clr-text-muted); }
-
-    .cat-bar-track {
-      height: 8px;
-      background: var(--clr-surface-2);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .cat-bar-fill {
-      height: 100%;
-      border-radius: 4px;
-      background: var(--clr-accent);
-      transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
-    }
-
-    /* ── Conseils ── */
-    .conseils-list { list-style: none; }
-
-    .conseil-item {
-      display: flex;
-      gap: var(--sp-4);
-      padding: var(--sp-4);
-      border: 1px solid var(--clr-border);
-      border-radius: var(--radius-md);
-      background: var(--clr-white);
-      margin-bottom: var(--sp-3);
-    }
-
-    .conseil-icon {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .conseil-text { font-size: 0.875rem; color: var(--clr-text-muted); }
-    .conseil-text strong { color: var(--clr-text); display: block; margin-bottom: 2px; }
-
-    /* ── Responsive ── */
-    @media (max-width: 500px) {
-      .choice-grid { grid-template-columns: 1fr; }
-      .step-label  { display: none; }
-    }
-  </style>
+  
 </head>
 
 <body>
@@ -367,8 +78,8 @@
           <div class="slider-ticks"><span>0</span><span>10 000</span><span>25 000</span><span>50 000</span></div>
         </div>
 
-        <div class="form-group" style="margin-bottom: var(--sp-6)">
-          <label class="form-group label" style="display:block;font-size:.875rem;font-weight:500;margin-bottom:var(--sp-3);color:var(--clr-text)">Type de motorisation</label>
+        <div class="form-group">
+          <label>Type de motorisation</label>
           <div class="choice-grid">
             <label class="choice-card">
               <input type="radio" name="motorisation" value="essence" checked />
@@ -423,8 +134,8 @@
           <div class="slider-ticks"><span>10 m²</span><span>60 m²</span><span>120 m²</span><span>200 m²</span></div>
         </div>
 
-        <div class="form-group" style="margin-bottom: var(--sp-6)">
-          <label style="display:block;font-size:.875rem;font-weight:500;margin-bottom:var(--sp-3);color:var(--clr-text)">Énergie principale de chauffage</label>
+        <div class="form-group">
+          <label>Énergie principale de chauffage</label>
           <div class="choice-grid">
             <label class="choice-card">
               <input type="radio" name="energie" value="electricite" checked />
@@ -459,8 +170,8 @@
           <p>L'alimentation représente environ 25 % de l'empreinte carbone des Français.</p>
         </div>
 
-        <div class="form-group" style="margin-bottom: var(--sp-6)">
-          <label style="display:block;font-size:.875rem;font-weight:500;margin-bottom:var(--sp-3);color:var(--clr-text)">Votre régime alimentaire</label>
+        <div class="form-group">
+          <label>Votre régime alimentaire</label>
           <div class="choice-grid">
             <label class="choice-card">
               <input type="radio" name="regime" value="viande_rouge" />
@@ -509,8 +220,8 @@
           <div class="slider-ticks"><span>0 h</span><span>4 h</span><span>8 h</span><span>16 h</span></div>
         </div>
 
-        <div class="form-group" style="margin-bottom: var(--sp-6)">
-          <label style="display:block;font-size:.875rem;font-weight:500;margin-bottom:var(--sp-3);color:var(--clr-text)">Appareil principal</label>
+        <div class="form-group">
+          <label>Appareil principal</label>
           <div class="choice-grid">
             <label class="choice-card">
               <input type="radio" name="appareil" value="laptop" checked />
@@ -531,9 +242,9 @@
           </div>
         </div>
 
-        <div class="form-group" style="margin-bottom: var(--sp-6)">
-          <label style="display:block;font-size:.875rem;font-weight:500;margin-bottom:var(--sp-3);color:var(--clr-text)">Type de connexion</label>
-          <div class="choice-grid" style="grid-template-columns: repeat(2, 1fr)">
+        <div class="form-group">
+          <label>Type de connexion</label>
+          <div class="choice-grid">
             <label class="choice-card">
               <input type="radio" name="connexion" value="wifi" checked />
               <div><div class="choice-label">Wi-Fi</div><div class="choice-sub">~0,013 kg CO₂/h</div></div>
@@ -567,14 +278,12 @@
 
         <div class="cat-bars" id="cat-bars"></div>
 
-        <div style="margin-bottom: var(--sp-8)">
-          <h3 style="font-family:var(--font-body);font-size:0.9rem;font-weight:600;color:var(--clr-text);margin-bottom:var(--sp-4)">
-            Recommandations personnalisées
-          </h3>
+        <div class="result-tips">
+          <h3>Recommandations personnalisées</h3>
           <ul class="conseils-list" id="conseils-list"></ul>
         </div>
 
-        <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap;padding-top:var(--sp-6);border-top:1px solid var(--clr-border)">
+        <div class="result-actions">
           <button class="btn btn-outline" onclick="goTo(1)">Recommencer</button>
           <a href="conseils.html" class="btn btn-primary">Voir tous les conseils</a>
         </div>
@@ -609,180 +318,6 @@
     </div>
   </footer>
 
-  <script>
-    // ── Facteurs d'émission (kg CO₂) — sources ADEME Base Carbone ──
-    const FACTEURS = {
-      motorisation: { essence: 0.21, diesel: 0.17, electrique: 0.10, aucune: 0 },
-      // avion : moyenne court + long courrier
-      avion: 0.23,
-      // logement : kg CO₂ par kWh, on estime ~120 kWh/m²/an
-      energie: { electricite: 0.052, gaz: 0.227, fioul: 0.324, pompe: 0.020 },
-      kwhParM2: 120,
-      // alimentation : kg CO₂ / an
-      regime: { viande_rouge: 2630, omnivore: 1900, flexitarien: 1400, vegetarien: 1050, vegan: 730 },
-      // numérique : kg CO₂ / h d'usage
-      appareil: { laptop: 0.021, desktop: 0.050, smartphone: 0.010, tablette: 0.015 },
-      connexion: { wifi: 0.013, '4g': 0.119 },
-    };
-
-    const MOYENNE_FR = 9200; // kg CO₂/an (ADEME 2023)
-
-    // ── Sliders ──
-    function initSlider(id, valId, formatter) {
-      const input = document.getElementById(id);
-      const val   = document.getElementById(valId);
-      const update = () => { val.textContent = formatter(parseFloat(input.value)); };
-      input.addEventListener('input', update);
-      update();
-    }
-
-    initSlider('km-voiture',     'val-km-voiture', v => v.toLocaleString('fr-FR') + ' km');
-    initSlider('km-avion',       'val-km-avion',   v => v.toLocaleString('fr-FR') + ' km');
-    initSlider('surface',        'val-surface',    v => v + ' m²');
-    initSlider('heures-internet','val-heures',     v => v + ' h/jour');
-
-    // ── Navigation ──
-    let currentStep = 1;
-
-    function goTo(n) {
-      document.getElementById('step-' + currentStep).classList.remove('active');
-      document.getElementById('si-' + currentStep).classList.remove('active');
-      if (n > currentStep) document.getElementById('si-' + currentStep).classList.add('done');
-      else document.getElementById('si-' + currentStep).classList.remove('done');
-
-      currentStep = n;
-      document.getElementById('step-' + currentStep).classList.add('active');
-      document.getElementById('si-' + currentStep).classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // ── Calcul ──
-    function getVal(name) {
-      const el = document.querySelector(`input[name="${name}"]:checked`);
-      return el ? el.value : null;
-    }
-
-    function calculer() {
-      const kmVoiture = parseFloat(document.getElementById('km-voiture').value);
-      const kmAvion   = parseFloat(document.getElementById('km-avion').value);
-      const surface   = parseFloat(document.getElementById('surface').value);
-      const heures    = parseFloat(document.getElementById('heures-internet').value);
-
-      const motorisation = getVal('motorisation') || 'essence';
-      const energie      = getVal('energie')      || 'electricite';
-      const regime       = getVal('regime')       || 'omnivore';
-      const appareil     = getVal('appareil')     || 'laptop';
-      const connexion    = getVal('connexion')    || 'wifi';
-
-      const transport   = Math.round(kmVoiture * FACTEURS.motorisation[motorisation] + kmAvion * FACTEURS.avion);
-      const logement    = Math.round(surface * FACTEURS.kwhParM2 * FACTEURS.energie[energie]);
-      const alimentation = FACTEURS.regime[regime];
-      const numerique   = Math.round(heures * 365 * (FACTEURS.appareil[appareil] + FACTEURS.connexion[connexion]));
-      const total       = transport + logement + alimentation + numerique;
-
-      afficherResultats({ transport, logement, alimentation, numerique, total });
-      goTo(5);
-    }
-
-    function afficherResultats(scores) {
-      const { transport, logement, alimentation, numerique, total } = scores;
-      const pct = Math.round((total / MOYENNE_FR) * 100);
-
-      // Total
-      document.getElementById('result-kg').innerHTML =
-        total.toLocaleString('fr-FR') + ' <span>kg CO₂/an</span>';
-      document.getElementById('result-compare').textContent =
-        `Soit ${pct}% de la moyenne française (${MOYENNE_FR.toLocaleString('fr-FR')} kg/an)`;
-
-      const badge = document.getElementById('result-badge');
-      if (pct <= 75) {
-        badge.textContent = '✓ En dessous de la moyenne';
-        badge.className   = 'result-badge badge-good';
-      } else if (pct <= 110) {
-        badge.textContent = '≈ Dans la moyenne';
-        badge.className   = 'result-badge badge-mid';
-      } else {
-        badge.textContent = '↑ Au-dessus de la moyenne';
-        badge.className   = 'result-badge badge-bad';
-      }
-
-      // Barres par catégorie
-      const cats = [
-        { label: '🚗 Transports',    val: transport },
-        { label: '🏠 Logement',       val: logement },
-        { label: '🥗 Alimentation',   val: alimentation },
-        { label: '💻 Numérique',      val: numerique },
-      ];
-      const max = Math.max(...cats.map(c => c.val), 1);
-      const barsEl = document.getElementById('cat-bars');
-      barsEl.innerHTML = cats.map(c => `
-        <div class="cat-bar-item">
-          <div class="cat-bar-header">
-            <span class="cat-bar-label">${c.label}</span>
-            <span class="cat-bar-val">${c.val.toLocaleString('fr-FR')} kg CO₂</span>
-          </div>
-          <div class="cat-bar-track">
-            <div class="cat-bar-fill" style="width:${Math.round((c.val/max)*100)}%"></div>
-          </div>
-        </div>
-      `).join('');
-
-      // Conseils
-      const conseils = genererConseils(scores);
-      document.getElementById('conseils-list').innerHTML = conseils.map(c =>
-        `<li class="conseil-item">
-          <span class="conseil-icon">${c.icon}</span>
-          <div class="conseil-text"><strong>${c.titre}</strong>${c.texte}</div>
-        </li>`
-      ).join('');
-    }
-
-    function genererConseils({ transport, logement, alimentation, numerique, total }) {
-      const conseils = [];
-
-      if (transport > 3000)
-        conseils.push({
-          icon: '🚗',
-          titre: 'Réduire les trajets en voiture',
-          texte: 'Le covoiturage ou les transports en commun peuvent diviser votre empreinte transport par 2 à 4.'
-        });
-      else if (transport > 0)
-        conseils.push({
-          icon: '🚲',
-          titre: 'Bon effort sur les transports !',
-          texte: 'Continuer à privilégier les modes doux pour les courts trajets consolide votre bilan.'
-        });
-
-      if (logement > 2000)
-        conseils.push({
-          icon: '🏠',
-          titre: 'Améliorer l\'isolation',
-          texte: 'Passer à une pompe à chaleur ou améliorer l\'isolation peut réduire votre empreinte logement de 60 %.'
-        });
-
-      if (alimentation >= 1900)
-        conseils.push({
-          icon: '🥗',
-          titre: 'Réduire la viande rouge',
-          texte: 'Passer à un régime flexitarien économise en moyenne 500 kg CO₂ par an, sans effort majeur.'
-        });
-
-      if (numerique > 200)
-        conseils.push({
-          icon: '💻',
-          titre: 'Sobriété numérique',
-          texte: 'Préférer le Wi-Fi à la 4G et allonger la durée de vie de vos appareils réduit fortement l\'empreinte numérique.'
-        });
-
-      if (conseils.length === 0)
-        conseils.push({
-          icon: '🌱',
-          titre: 'Empreinte maîtrisée',
-          texte: 'Votre bilan est inférieur à la moyenne. Partagez vos pratiques autour de vous pour avoir un impact collectif !'
-        });
-
-      return conseils;
-    }
-  </script>
+  <script src="calculateur.js" defer></script>
 </body>
 </html>
