@@ -300,15 +300,14 @@ a { color: inherit; text-decoration: none; }
 }
 .eco__text p { margin-bottom: var(--sp-6); }
 
-.eco__img-placeholder {
+.eco__div_img {
   aspect-ratio: 4/3;
-  background: var(--clr-surface-2);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--clr-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--clr-border);
+}
+.eco__img {
+  width: 250px;
 }
 
 .eco__links {
