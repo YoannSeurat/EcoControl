@@ -331,7 +331,9 @@
       color: var(--clr-text);
       margin-bottom: var(--sp-2);
     }
-    .faq__item p { font-size: 0.875rem; }
+    .faq__item p { 
+      font-size: 0.875rem;
+    }
 
     .faq__contact {
       margin-top: var(--sp-16);
