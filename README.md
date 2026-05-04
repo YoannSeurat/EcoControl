@@ -8,7 +8,7 @@ Eco Control est une application web de calcul d'empreinte carbone personnelle, d
 
 ## Contexte
 
-Ce projet a été réalisé par quatre étudiants — Yoann Seurat, Sangleir, Savatier et Sivaharan — dans le cadre d'un mini-projet académique portant sur le numérique responsable. L'objectif pédagogique était de concevoir et déployer une application web en respectant les principes de l'éco-conception numérique : sobriété technique, performance, accessibilité et transparence.
+Ce projet a été réalisé par cinq étudiants - Yoann Seurat, Sidney Sanglier, Arthur Savatier, Kevin Sivaharan, Aubin Sabiani - dans le cadre d'un mini-projet académique portant sur le numérique responsable. L'objectif pédagogique était de concevoir et déployer une application web en respectant les principes de l'éco-conception numérique : sobriété technique, performance, accessibilité et transparence.
 
 L'application vise à sensibiliser le grand public à son impact environnemental en proposant un outil de mesure simple, rapide et accessible, sans installation ni compte obligatoire.
 
@@ -20,10 +20,10 @@ L'application vise à sensibiliser le grand public à son impact environnemental
 
 Le calculateur guide l'utilisateur en quatre étapes successives :
 
-1. **Transports** — kilométrage annuel en voiture (essence, diesel, électrique ou aucune motorisation) et en avion.
-2. **Logement** — surface du logement et source d'énergie principale de chauffage (électricité, gaz naturel, fioul, pompe à chaleur).
-3. **Alimentation** — régime alimentaire (viande rouge régulière, omnivore, flexitarien, végétarien, vegan).
-4. **Numérique** — temps passé sur internet par jour, appareils utilisés (ordinateur portable, fixe, smartphone, tablette) et type de connexion (Wi-Fi, 4G/5G).
+1. **Transports** — kilométrage annuel en voiture et en avion.
+2. **Logement** — surface du logement et source d'énergie principale de chauffage.
+3. **Alimentation** — régime alimentaire.
+4. **Numérique** — temps passé sur internet par jour, appareils utilisés et type de connexion.
 
 À l'issue de ces étapes, l'application affiche :
 
@@ -71,19 +71,18 @@ Le projet est entièrement statique : il ne repose sur aucun framework front-end
 
 ```
 EcoControl/
-├── index.html            Page d'accueil
-├── calculateur.html      Calculateur (formulaire multi-étapes)
-├── calculateur.js        Logique de calcul et d'affichage des résultats
-├── conseils.html         Page des conseils et bonnes pratiques
-├── a-propos.html         Page de présentation du projet
-├── connexion.html        Page de connexion (statique)
-├── inscription.html      Page d'inscription (statique)
-├── contact.html          Page de contact
-├── confidentialite.html  Politique de confidentialité
-├── conditions.html       Conditions d'utilisation
-├── style.css             Feuille de style principale
-├── output.css            CSS compilé (Tailwind)
-├── assets/               Logo (clair et foncé)
+├── index.html
+├── calculateur.html
+├── calculateur.js 
+├── conseils.html
+├── a-propos.html
+├── connexion.html
+├── inscription.html
+├── contact.html
+├── confidentialite.html
+├── conditions.html
+├── style.css
+├── assets/               Logos et images de la page d'accueil
 └── pdf/                  Livrables académiques du projet
 ```
 
@@ -115,12 +114,7 @@ L'application est déployée via GitHub Pages et accessible sans installation à
 
 **https://yoannseurat.github.io/EcoControl/**
 
-Pour travailler localement, il suffit d'ouvrir `index.html` directement dans un navigateur ou de servir le répertoire avec n'importe quel serveur HTTP statique :
-
-```bash
-# Exemple avec Python
-python -m http.server 8080
-```
+Pour travailler localement, il suffit d'ouvrir `index.html` directement dans un navigateur.
 
 ---
 
@@ -132,4 +126,5 @@ Les livrables du projet (cahier des charges, spécifications, wireframes) sont d
 
 ## Auteurs
 
-Yoann Seurat, Sangleir, Savatier, Sivaharan — promotion TI616.
+Yoann Seurat, Sidney Sanglier, Arthur Savatier, Kevin Sivaharan, Aubin Sabiani
+© EFREI 2026
