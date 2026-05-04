@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conseils & Bonnes Pratiques — Projet Green IT</title>
-  <meta name="description" content="Découvrez des conseils pratiques pour réduire votre empreinte carbone, avec des ressources ADEME sur les transports, le logement, l'alimentation et le numérique." />
+  <meta name="description" content="Découvrez des conseils pratiques pour réduire votre empreinte carbone." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,7 @@
       <div class="container nav__inner">
         <a href="index.html" class="nav__logo" aria-label="Accueil Projet Green IT">LOGO</a>
 
-        <ul class="nav__links" role="list">
+        <ul class="nav__links">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="calculateur.html">Calculateur</a></li>
           <li><a href="conseils.html">Conseils</a></li>
@@ -43,160 +43,148 @@
       </div>
     </section>
 
-    <section class="container" style="padding: var(--sp-24) var(--sp-6);">
-      <div style="margin-bottom: var(--sp-16);">
-        <h2 style="margin-bottom: var(--sp-6);">Transports</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-6);">
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Privilégier les transports en commun</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Le train, le métro et le bus réduisent fortement les émissions par rapport à la voiture solo.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-empreinte-carbone/calculer-emissions-carbone-trajets" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+    <section class="container conseils-page">
+      <div class="conseils-section">
+        <h2 class="conseils-section__title">Transports</h2>
+        <div class="conseils-grid">
+          <article class="conseil-card">
+            <h3>Privilégier les transports en commun</h3>
+            <p>Le train, le métro et le bus réduisent fortement les émissions par rapport à la voiture solo.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-empreinte-carbone/calculer-emissions-carbone-trajets" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Utiliser le vélo ou la marche</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Pour les trajets courts, les mobilités douces sont les plus sobres et les plus simples à mettre en place.</p>
-            <a href="https://librairie.ademe.fr/mobilite-et-transports/5886-10-gestes-pour-economiser-lors-de-ses-trajets.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+          <article class="conseil-card">
+            <h3>Utiliser le vélo ou la marche</h3>
+            <p>Pour les trajets courts, les mobilités douces sont les plus sobres et les plus simples à mettre en place.</p>
+            <a class="ademe-link" href="https://librairie.ademe.fr/mobilite-et-transports/5886-10-gestes-pour-economiser-lors-de-ses-trajets.html" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Opter pour un véhicule électrique</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Le véhicule électrique peut réduire l'impact si l'usage est adapté et si le remplacement est pertinent.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/economiser/carburant/ecoconduite-solution-consommer-moins-carburant-limiter-emissions-co2" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+          <article class="conseil-card">
+            <h3>Opter pour un véhicule électrique</h3>
+            <p>Le véhicule électrique peut réduire l'impact si l'usage est adapté et si le remplacement est pertinent.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/economiser/carburant/ecoconduite-solution-consommer-moins-carburant-limiter-emissions-co2" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Pratiquer le covoiturage</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Partager les trajets permet de diviser les émissions et de limiter le nombre de véhicules sur la route.</p>
-            <a href="https://librairie.ademe.fr/mobilite-et-transports/5886-10-gestes-pour-economiser-lors-de-ses-trajets.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+          <article class="conseil-card">
+            <h3>Pratiquer le covoiturage</h3>
+            <p>Partager les trajets permet de diviser les émissions et de limiter le nombre de véhicules sur la route.</p>
+            <a class="ademe-link" href="https://librairie.ademe.fr/mobilite-et-transports/5886-10-gestes-pour-economiser-lors-de-ses-trajets.html" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Réduire les vols en avion</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">L'avion reste l'un des modes les plus émetteurs, surtout sur les courtes et moyennes distances.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-empreinte-carbone/calculer-emissions-carbone-trajets" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-        </div>
-      </div>
-
-      <div style="margin-bottom: var(--sp-16);">
-        <h2 style="margin-bottom: var(--sp-6);">Logement</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-6);">
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Réduire la température de 1°C</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Un degré de moins suffit souvent à réduire la consommation sans perdre en confort.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Améliorer l'isolation thermique</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">L'isolation reste l'un des leviers les plus efficaces pour baisser durablement les besoins en chauffage.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Installer des panneaux solaires</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Produire une partie de son énergie permet de limiter l'empreinte liée à l'électricité consommée.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Limiter la consommation d'eau chaude</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Douches plus courtes et réglages plus sobres réduisent la consommation d'énergie au quotidien.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Choisir des appareils efficaces</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">À l'achat, vérifier la sobriété et la performance énergétique évite des consommations inutiles.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Utiliser des ampoules LED</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Les LED consomment beaucoup moins que les anciennes ampoules et durent plus longtemps.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Entretenir son chauffage</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Un entretien régulier et un réglage adapté évitent les surconsommations et les pannes.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+          <article class="conseil-card">
+            <h3>Réduire les vols en avion</h3>
+            <p>L'avion reste l'un des modes les plus émetteurs, surtout sur les courtes et moyennes distances.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-empreinte-carbone/calculer-emissions-carbone-trajets" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
         </div>
       </div>
 
-      <div style="margin-bottom: var(--sp-16);">
-        <h2 style="margin-bottom: var(--sp-6);">Alimentation</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-6);">
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Réduire la consommation de viande</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Diminuer la part de viande, surtout bovine, est un levier majeur pour réduire son impact.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+      <div class="conseils-section">
+        <h2 class="conseils-section__title">Logement</h2>
+        <div class="conseils-grid">
+          <article class="conseil-card">
+            <h3>Réduire la température de 1°C</h3>
+            <p>Un degré de moins suffit souvent à réduire la consommation sans perdre en confort.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Manger local et de saison</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Les produits locaux et de saison réduisent les transports et favorisent une consommation plus sobre.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+          <article class="conseil-card">
+            <h3>Améliorer l'isolation thermique</h3>
+            <p>L'isolation reste l'un des leviers les plus efficaces pour baisser durablement les besoins en chauffage.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Privilégier les produits bio</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Le bio n'est pas la seule réponse, mais il peut faire partie d'une alimentation plus responsable.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+          <article class="conseil-card">
+            <h3>Installer des panneaux solaires</h3>
+            <p>Produire une partie de son énergie permet de limiter l'empreinte liée à l'électricité consommée.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Réduire le gaspillage alimentaire</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Planifier ses repas et mieux conserver les aliments évite de jeter des produits encore consommables.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+          <article class="conseil-card">
+            <h3>Limiter la consommation d'eau chaude</h3>
+            <p>Douches plus courtes et réglages plus sobres réduisent la consommation d'énergie au quotidien.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Cuisiner les restes</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Réutiliser les restes est un moyen simple de limiter le gaspillage et les achats inutiles.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+          <article class="conseil-card">
+            <h3>Choisir des appareils efficaces</h3>
+            <p>À l'achat, vérifier la sobriété et la performance énergétique évite des consommations inutiles.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
-        </div>
-      </div>
-
-      <div style="margin-bottom: var(--sp-16);">
-        <h2 style="margin-bottom: var(--sp-6);">Numérique & Consommation</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-6);">
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Faire durer ses appareils</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Allonger la durée de vie d'un appareil reste l'un des meilleurs moyens de réduire son impact.</p>
-            <a href="https://librairie.ademe.fr/batiment/9283-11066-etiquette-energie-des-smartphones-et-des-tablettes.html#/44-type_de_produit-format_electronique" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+          <article class="conseil-card">
+            <h3>Utiliser des ampoules LED</h3>
+            <p>Les LED consomment beaucoup moins que les anciennes ampoules et durent plus longtemps.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Réparer plutôt que remplacer</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">La réparation et le reconditionné évitent la fabrication d'un produit neuf.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/reduire-dechets/bien-jeter/simulateur-que-faire-objets-et-dechets" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Nettoyer ses emails</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Supprimer les messages inutiles et les pièces jointes inutiles réduit les données stockées.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/ressources" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Réduire la qualité vidéo</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Regarder les vidéos en qualité adaptée à l'écran limite la consommation de données et d'énergie.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/ressources" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Acheter moins et mieux</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Réfléchir avant l'achat et privilégier des produits durables évite des remplacements trop fréquents.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/ressources" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Acheter d'occasion</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">La seconde main est une alternative simple pour prolonger la durée de vie des objets.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/reduire-dechets/bien-jeter/simulateur-que-faire-objets-et-dechets" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
-          </article>
-          <article style="background: var(--clr-white); border: 1px solid var(--clr-border); padding: var(--sp-6); border-radius: var(--radius-md);">
-            <h3 style="margin-bottom: var(--sp-2);">Trier et recycler ses équipements</h3>
-            <p style="font-size: 0.9rem; color: var(--clr-text-muted);">Les appareils en fin de vie doivent être déposés dans les filières adaptées pour limiter les impacts.</p>
-            <a href="https://agirpourlatransition.ademe.fr/particuliers/reduire-dechets/bien-jeter/simulateur-que-faire-objets-et-dechets" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: var(--sp-4); color: var(--clr-accent); font-weight: 500;">Voir la ressource ADEME →</a>
+          <article class="conseil-card">
+            <h3>Entretenir son chauffage</h3>
+            <p>Un entretien régulier et un réglage adapté évitent les surconsommations et les pannes.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
           </article>
         </div>
       </div>
 
-      <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); padding: var(--sp-8); text-align: center;">
-        <h2 style="margin-bottom: var(--sp-3);">Liens ADEME</h2>
-        <p style="max-width: 65ch; margin: 0 auto var(--sp-6);">Toutes les ressources ci-dessus renvoient vers l'ADEME pour approfondir chaque sujet avec des contenus fiables.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: var(--sp-3); justify-content: center;">
-          <a href="https://agirpourlatransition.ademe.fr/particuliers/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">ADEME</a>
-          <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-empreinte-carbone/calculer-emissions-carbone-trajets" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Transports</a>
-          <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-logement/simulateur-impact-carbone-chauffage" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Maison</a>
-          <a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Alimentation</a>
-          <a href="https://agirpourlatransition.ademe.fr/particuliers/ressources" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Numérique</a>
+      <div class="conseils-section">
+        <h2 class="conseils-section__title">Alimentation</h2>
+        <div class="conseils-grid">
+          <article class="conseil-card">
+            <h3>Réduire la consommation de viande</h3>
+            <p>Diminuer la part de viande, surtout bovine, est un levier majeur pour réduire son impact.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+          <article class="conseil-card">
+            <h3>Manger local et de saison</h3>
+            <p>Les produits locaux et de saison réduisent les transports et favorisent une consommation plus sobre.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+          <article class="conseil-card">
+            <h3>Privilégier les produits bio</h3>
+            <p>Le bio n'est pas la seule réponse, mais il peut faire partie d'une alimentation plus responsable.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+          <article class="conseil-card">
+            <h3>Réduire le gaspillage alimentaire</h3>
+            <p>Planifier ses repas et mieux conserver les aliments évite de jeter des produits encore consommables.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+          <article class="conseil-card">
+            <h3>Cuisiner les restes</h3>
+            <p>Réutiliser les restes est un moyen simple de limiter le gaspillage et les achats inutiles.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="conseils-section">
+        <h2 class="conseils-section__title">Numérique & Consommation</h2>
+        <div class="conseils-grid">
+          <article class="conseil-card">
+            <h3>Faire durer ses appareils</h3>
+            <p>Allonger la durée de vie d'un appareil reste l'un des meilleurs moyens de réduire son impact.</p>
+            <a class="ademe-link" href="https://librairie.ademe.fr/batiment/9283-11066-etiquette-energie-des-smartphones-et-des-tablettes.html#/44-type_de_produit-format_electronique" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+          <article class="conseil-card">
+            <h3>Réparer plutôt que remplacer</h3>
+            <p>La réparation et le reconditionné évitent la fabrication d'un produit neuf.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/reduire-dechets/bien-jeter/simulateur-que-faire-objets-et-dechets" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+          <article class="conseil-card">
+            <h3>Nettoyer ses emails</h3>
+            <p>Supprimer les messages inutiles et les pièces jointes inutiles réduit les données stockées.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/ressources" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+          <article class="conseil-card">
+            <h3>Réduire la qualité vidéo</h3>
+            <p>Regarder les vidéos en qualité adaptée à l'écran limite la consommation de données et d'énergie.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/ressources" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+          <article class="conseil-card">
+            <h3>Acheter moins et mieux</h3>
+            <p>Réfléchir avant l'achat et privilégier des produits durables évite des remplacements trop fréquents.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/ressources" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+          <article class="conseil-card">
+            <h3>Acheter d'occasion</h3>
+            <p>La seconde main est une alternative simple pour prolonger la durée de vie des objets.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/reduire-dechets/bien-jeter/simulateur-que-faire-objets-et-dechets" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
+          <article class="conseil-card">
+            <h3>Trier et recycler ses équipements</h3>
+            <p>Les appareils en fin de vie doivent être déposés dans les filières adaptées pour limiter les impacts.</p>
+            <a class="ademe-link" href="https://agirpourlatransition.ademe.fr/particuliers/reduire-dechets/bien-jeter/simulateur-que-faire-objets-et-dechets" target="_blank" rel="noopener noreferrer">→ Voir la ressource ADEME</a>
+          </article>
         </div>
       </div>
     </section>
@@ -208,15 +196,16 @@
       <div class="footer__cols">
         <div class="footer__col">
           <h5>Navigation</h5>
-          <ul role="list">
+          <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="calculateur.html">Calculateur</a></li>
             <li><a href="conseils.html">Conseils</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h5>Légal</h5>
-          <ul role="list">
+          <ul>
             <li><a href="confidentialite.html">Confidentialité</a></li>
             <li><a href="conditions.html">Conditions</a></li>
           </ul>
