@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculateur — Projet Green IT</title>
+  <title>Calculateur - Eco Control</title>
   <meta name="description" content="Calculez votre empreinte carbone numérique en quelques questions." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="style.css" />
 
   
 </head>
@@ -18,7 +18,7 @@
   <header>
     <nav class="nav" aria-label="Navigation principale">
       <div class="container nav__inner">
-        <a href="index.html" class="nav__logo">LOGO</a>
+        <a href="index.html" class="nav__logo"><img class="img_logo" src="assets/logo.png" alt="Logo Eco Control" /></a>
         <ul class="nav__links">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="calculateur.html">Calculateur</a></li>
@@ -60,7 +60,7 @@
         </li>
       </ul>
 
-      <!-- ══ ÉTAPE 1 — Transports ══ -->
+      <!-- ══ ÉTAPE 1 - Transports ══ -->
       <div class="calc-step active" id="step-1">
         <div class="step-header">
           <p class="step-eyebrow">Étape 1 / 4</p>
@@ -116,7 +116,7 @@
         </div>
       </div>
 
-      <!-- ══ ÉTAPE 2 — Logement ══ -->
+      <!-- ══ ÉTAPE 2 - Logement ══ -->
       <div class="calc-step" id="step-2">
         <div class="step-header">
           <p class="step-eyebrow">Étape 2 / 4</p>
@@ -162,7 +162,7 @@
         </div>
       </div>
 
-      <!-- ══ ÉTAPE 3 — Alimentation ══ -->
+      <!-- ══ ÉTAPE 3 - Alimentation ══ -->
       <div class="calc-step" id="step-3">
         <div class="step-header">
           <p class="step-eyebrow">Étape 3 / 4</p>
@@ -202,7 +202,7 @@
         </div>
       </div>
 
-      <!-- ══ ÉTAPE 4 — Numérique ══ -->
+      <!-- ══ ÉTAPE 4 - Numérique ══ -->
       <div class="calc-step" id="step-4">
         <div class="step-header">
           <p class="step-eyebrow">Étape 4 / 4</p>
@@ -221,36 +221,36 @@
         </div>
 
         <div class="form-group">
-          <label>Appareil principal</label>
+          <label>Appareils utilisés</label>
           <div class="choice-grid">
             <label class="choice-card">
-              <input type="radio" name="appareil" value="laptop" checked />
+              <input type="checkbox" name="appareil" value="laptop" checked />
               <div><div class="choice-label">Ordinateur portable</div><div class="choice-sub">~0,02 kg CO₂/h</div></div>
             </label>
             <label class="choice-card">
-              <input type="radio" name="appareil" value="desktop" />
+              <input type="checkbox" name="appareil" value="desktop" />
               <div><div class="choice-label">Ordinateur fixe</div><div class="choice-sub">~0,05 kg CO₂/h</div></div>
             </label>
             <label class="choice-card">
-              <input type="radio" name="appareil" value="smartphone" />
+              <input type="checkbox" name="appareil" value="smartphone" />
               <div><div class="choice-label">Smartphone</div><div class="choice-sub">~0,01 kg CO₂/h</div></div>
             </label>
             <label class="choice-card">
-              <input type="radio" name="appareil" value="tablette" />
+              <input type="checkbox" name="appareil" value="tablette" />
               <div><div class="choice-label">Tablette</div><div class="choice-sub">~0,015 kg CO₂/h</div></div>
             </label>
           </div>
         </div>
 
         <div class="form-group">
-          <label>Type de connexion</label>
+          <label>Types de connexion utilisés</label>
           <div class="choice-grid">
             <label class="choice-card">
-              <input type="radio" name="connexion" value="wifi" checked />
+              <input type="checkbox" name="connexion" value="wifi" checked />
               <div><div class="choice-label">Wi-Fi</div><div class="choice-sub">~0,013 kg CO₂/h</div></div>
             </label>
             <label class="choice-card">
-              <input type="radio" name="connexion" value="4g" />
+              <input type="checkbox" name="connexion" value="4g" />
               <div><div class="choice-label">4G / 5G</div><div class="choice-sub">~0,12 kg CO₂/h</div></div>
             </label>
           </div>
@@ -262,7 +262,7 @@
         </div>
       </div>
 
-      <!-- ══ ÉTAPE 5 — Résultats ══ -->
+      <!-- ══ ÉTAPE 5 - Résultats ══ -->
       <div class="calc-step" id="step-5" aria-live="polite">
         <div class="step-header">
           <p class="step-eyebrow">Votre bilan carbone</p>
@@ -271,7 +271,7 @@
 
         <div class="result-total" id="result-total">
           <p class="eyebrow">Empreinte annuelle estimée</p>
-          <div class="result-kg" id="result-kg">— <span>kg CO₂/an</span></div>
+          <div class="result-kg" id="result-kg">- <span>kg CO₂/an</span></div>
           <p class="result-compare" id="result-compare"></p>
           <span class="result-badge" id="result-badge"></span>
         </div>
@@ -294,7 +294,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="footer__logo">LOGO</p>
+      <p class="footer__logo"><img class="img_logo op8" src="assets/logo light.png" alt="Logo Eco Control" /></p>
       <div class="footer__cols">
         <div class="footer__col">
           <h5>Navigation</h5>
@@ -310,11 +310,12 @@
           <ul>
             <li><a href="confidentialite.html">Confidentialité</a></li>
             <li><a href="conditions.html">Conditions</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>© 2026 Projet Green IT. Tous droits réservés.</span>
+        <span>© 2026 Eco Control. Tous droits réservés.</span>
       </div>
     </div>
   </footer>

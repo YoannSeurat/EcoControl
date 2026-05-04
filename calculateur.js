@@ -1,15 +1,15 @@
-// ── Facteurs d'émission (kg CO₂) — sources ADEME Base Carbone ──
+// ── Facteurs d'émission (kg CO₂) - sources ADEME Base Carbone ──
 const FACTEURS = {
-  motorisation: { essence: 0.21, diesel: 0.17, electrique: 0.10, aucune: 0 },
+  motorisation: { essence: 0.21, diesel: 0.17, electrique: 0.1, aucune: 0 },
   // avion : moyenne court + long courrier
   avion: 0.23,
   // logement : kg CO₂ par kWh, on estime ~120 kWh/m²/an
-  energie: { electricite: 0.052, gaz: 0.227, fioul: 0.324, pompe: 0.020 },
+  energie: { electricite: 0.052, gaz: 0.227, fioul: 0.324, pompe: 0.02 },
   kwhParM2: 120,
   // alimentation : kg CO₂ / an
   regime: { viande_rouge: 2630, omnivore: 1900, flexitarien: 1400, vegetarien: 1050, vegan: 730 },
   // numérique : kg CO₂ / h d'usage
-  appareil: { laptop: 0.021, desktop: 0.050, smartphone: 0.010, tablette: 0.015 },
+  appareil: { laptop: 0.021, desktop: 0.05, smartphone: 0.01, tablette: 0.015 },
   connexion: { wifi: 0.013, '4g': 0.119 },
 };
 
@@ -18,7 +18,7 @@ const MOYENNE_FR = 9200; // kg CO₂/an (ADEME 2023)
 function initSlider(id, valId, formatter) {
   const input = document.getElementById(id);
   const val   = document.getElementById(valId);
-  const update = () => { val.textContent = formatter(parseFloat(input.value)); };
+  const update = () => { val.textContent = formatter(Number.parseFloat(input.value)); };
   input.addEventListener('input', update);
   update();
 }
@@ -49,22 +49,30 @@ function getVal(name) {
   return el ? el.value : null;
 }
 
+function getVals(name) {
+  const els = document.querySelectorAll(`input[name="${name}"]:checked`);
+  return Array.from(els).map(el => el.value);
+}
+
 function calculer() {
-  const kmVoiture = parseFloat(document.getElementById('km-voiture').value);
-  const kmAvion   = parseFloat(document.getElementById('km-avion').value);
-  const surface   = parseFloat(document.getElementById('surface').value);
-  const heures    = parseFloat(document.getElementById('heures-internet').value);
+  const kmVoiture = Number.parseFloat(document.getElementById('km-voiture').value);
+  const kmAvion   = Number.parseFloat(document.getElementById('km-avion').value);
+  const surface   = Number.parseFloat(document.getElementById('surface').value);
+  const heures    = Number.parseFloat(document.getElementById('heures-internet').value);
 
   const motorisation = getVal('motorisation') || 'essence';
   const energie      = getVal('energie')      || 'electricite';
   const regime       = getVal('regime')       || 'omnivore';
-  const appareil     = getVal('appareil')     || 'laptop';
-  const connexion    = getVal('connexion')    || 'wifi';
+  const appareils    = getVals('appareil').length > 0 ? getVals('appareil') : ['laptop'];
+  const connexions   = getVals('connexion').length > 0 ? getVals('connexion') : ['wifi'];
 
   const transport   = Math.round(kmVoiture * FACTEURS.motorisation[motorisation] + kmAvion * FACTEURS.avion);
   const logement    = Math.round(surface * FACTEURS.kwhParM2 * FACTEURS.energie[energie]);
   const alimentation = FACTEURS.regime[regime];
-  const numerique   = Math.round(heures * 365 * (FACTEURS.appareil[appareil] + FACTEURS.connexion[connexion]));
+  
+  const facteurAppareils = appareils.reduce((sum, app) => sum + FACTEURS.appareil[app], 0);
+  const facteurConnexions = connexions.reduce((sum, conn) => sum + FACTEURS.connexion[conn], 0);
+  const numerique   = Math.round(heures * 365 * (facteurAppareils + facteurConnexions));
   const total       = transport + logement + alimentation + numerique;
 
   afficherResultats({ transport, logement, alimentation, numerique, total });
