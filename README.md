@@ -60,7 +60,6 @@ La page Conseils propose 24 fiches pratiques organisées en quatre thèmes — T
 ### Autres pages
 
 - **À propos** : présentation de la mission du projet (sensibiliser, mesurer, agir).
-- **Connexion / Inscription** : interfaces statiques (non fonctionnelles dans la version actuelle).
 - **Contact, Confidentialité, Conditions** : pages légales et de contact.
 
 ---
@@ -76,8 +75,6 @@ EcoControl/
 ├── calculateur.js 
 ├── conseils.html
 ├── a-propos.html
-├── connexion.html
-├── inscription.html
 ├── contact.html
 ├── confidentialite.html
 ├── conditions.html
