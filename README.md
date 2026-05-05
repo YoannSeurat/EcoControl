@@ -121,7 +121,7 @@ Les livrables du projet (cahier des charges, spécifications, wireframes) sont d
 
 ---
 
-## Auteurs
+## Liste des auteurs
 
 Yoann Seurat, Sidney Sanglier, Arthur Savatier, Kevin Sivaharan, Aubin Sabiani
 © EFREI 2026
